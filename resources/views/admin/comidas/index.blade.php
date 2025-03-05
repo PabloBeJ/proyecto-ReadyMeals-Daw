@@ -61,7 +61,7 @@
                             <a href="{{ url("admin/comidas/home/".$row->id) }}" title="{{ $title }}">
                                 <i class="{{ $color }} material-icons">home</i>
                             </a>
-                            <a href="#" class="activator" title="Borrar">
+                            <a href="#" class="activator" onclick="event.preventDefault(); this.closest('.card').querySelector('.card-reveal').classList.toggle('show');" title="Borrar">
                                 <i class="material-icons">delete</i>
                             </a>
                         </div>
@@ -73,6 +73,11 @@
                             ¿Está seguro de que quiere borrar la comida<strong>{{ $row->titulo }}</strong>?<br>
                             Esta acción no se puede deshacer.
                         </p>
+                        <a href="{{ url("admin/comidas/borrar/".$row->id) }}" title="Borrar">
+                        <button class="btn waves-effect waves-light" type="button">Borrar
+                            <i class="material-icons right">delete</i>
+                        </button>
+                    </a>
 
                     </div>
                 </div>

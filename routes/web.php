@@ -39,6 +39,7 @@ Route::post('admin/usuarios/actualizar/{id}', [UsuarioController::class, 'actual
 Route::get('admin/usuarios/activar/{id}', [UsuarioController::class, 'activar']);
 Route::get('admin/usuarios/borrar/{id}', [UsuarioController::class, 'borrar']);
 
+Route::get('admin/usuarios/deleteconfirma/{id}', [UsuarioController::class, 'deleteConfirmation'])->name('usuarios.deleteConfirmation');
 //Back-end
 Route::get('admin', [AdminController::class, 'index'])->name('admin');
 Route::get('admin/comidas', [ComidaController::class, 'index'])->middleware('role:comidas');
@@ -50,6 +51,12 @@ Route::post('admin/comidas/actualizar/{id}', [ComidaController::class, 'actualiz
 Route::get('admin/comidas/activar/{id}', [ComidaController::class, 'activar']);
 Route::get('admin/comidas/home/{id}', [ComidaController::class, 'home']);
 Route::get('admin/comidas/borrar/{id}', [ComidaController::class, 'borrar']);
+
+
+
+
+
+
 
 //Buscador
 Route::get('buscador',[AppController::class,'buscador']);

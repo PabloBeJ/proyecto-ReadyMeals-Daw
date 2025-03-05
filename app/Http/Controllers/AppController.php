@@ -10,13 +10,14 @@ class AppController extends Controller
     public function index()
     {
         //Obtengo las comidas a mostrar en la home
-        $rowset = Comida::where('activo', 1)->orderBy('fecha', 'DESC')->get();
-
+        $rowset = Comida::where('activo', 1)
+            ->where('home', 1)
+            ->orderBy('fecha', 'DESC')
+            ->get();
         return view('app.index', [
             'rowset' => $rowset,
         ]);
     }
-
     public function comidas()
     {
         //Obtengo las comidas a mostrar en el listado de comidas
@@ -47,16 +48,16 @@ class AppController extends Controller
     }
 
     public function buscador()
-{
-    $buscar_texto = $_GET['query'];
+    {
+        $buscar_texto = $_GET['query'];
 
-    // Get all comidas ordered by the most recent fecha
-    $rowset = Comida::orderBy('fecha', 'DESC')->firstOrFail()
-        ->where('titulo', 'LIKE', '%' . $buscar_texto . '%')
-        ->orWhere('autor', 'LIKE', '%' . $buscar_texto . '%')
-        ->get();
+        // Get all comidas ordered by the most recent fecha
+        $rowset = Comida::orderBy('fecha', 'DESC')->firstOrFail()
+            ->where('titulo', 'LIKE', '%' . $buscar_texto . '%')
+            ->orWhere('autor', 'LIKE', '%' . $buscar_texto . '%')
+            ->get();
 
-    return view('app.comidas', compact('rowset')); // Correct usage
-}
+        return view('app.comidas', compact('rowset')); // Correct usage
+    }
 
 }

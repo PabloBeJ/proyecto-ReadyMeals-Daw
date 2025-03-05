@@ -1,0 +1,403 @@
+/* LAYOUT *************************************************************************************************************/
+html {
+    font-family: 'Roboto', sans-serif;
+    margin: 5px;
+    font-weight: 950;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #22252A;
+}
+
+.navegacion {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    width: 100%;
+    background-color: #333;
+    box-shadow: none;
+    border-radius: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    background-color: #333;
+    box-shadow: none;
+}
+
+icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-nomobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-nomobile li a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.InicioSesion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navegacion h1 a {
+    font-family: 'Noto Sans Gujarati';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    color: white;
+    margin-left: 30px;
+    margin-top: -10px;
+}
+
+.nav-nomobile li a:hover, .navegacion h1 a:hover, .button-registro li a {
+    background-color: #fffef7;
+    color: black;
+    border-radius: 15px;
+}
+
+.titulo {
+    display: flex;
+}
+
+.titulo h1 {
+    align-items: center;
+    display: flex;
+    width: 250px;
+    color: red;
+}
+
+.titulo img {
+    width: 120px;
+    heigh: 120px;
+    border-radius: 80%;
+    margin-top: 7px;
+}
+
+input[type="search"] {
+    height: 64px !important; /* or height of nav */
+    background-color: red;
+}
+
+main {
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+.formulario {
+    margin: 0 auto;
+    float: none;
+    padding: 10px;
+}
+
+.formulario h3 .formulario span0 {
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 56px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 1rem 0 0 0;
+}
+
+.input-field div input {
+    color: red;
+}
+
+p {
+    color: red;
+    text-indent: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+header h2, section h3 {
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 56px;
+    color: white;
+}
+
+.card {
+    border-radius: 25px;
+    background-color: #0D0202;
+    color: #fffef7;
+
+}
+
+.button {
+    background-color: #ff0000;
+    color: #000000;
+    font-style: normal;
+    font-family: Noto Sans Gujarati;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    border-radius: 250px;
+}
+
+.formulario {
+    margin-right: auto;
+    margin-left: auto;
+    height: auto;
+}
+
+.piePag {
+    background-color: #111111;
+    color: white;
+    padding: 1rem 0;
+    margin-top: 20px;
+}
+
+.piePag a, .piePag div {
+    color: white;
+}
+
+.piePag a:hover {
+    text-decoration: underline;
+}
+
+.logoFooter img {
+    width: 120px;
+    height: 120px;
+    margin-left: -40px;
+    background-color: white;
+}
+
+/* SECTION ************************************************************************************************************/
+
+
+section h3 span {
+    font-weight: normal;
+}
+
+.btn {
+    background-color: #777;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+article h4 {
+    font-size: 1.5rem;
+}
+
+article .card-info {
+    position: relative;
+    bottom: 3rem;
+    left: 1.5rem;
+}
+
+.card.horizontal.small .card-image {
+    max-height: 70%;
+}
+
+.card.horizontal.small .card-image img {
+    margin-top: 20%;
+}
+
+.card.horizontal.noticia {
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.card.horizontal.admin h4 {
+    margin: 0 0 0.5rem 0.5rem;
+}
+
+.card.horizontal.admin strong {
+    margin-left: 0.5rem;
+}
+
+.card.horizontal.admin img {
+    height: 3rem;
+    margin: 1.5rem 0 0 2rem;
+}
+
+.toast {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    color: red;
+    cursor: pointer;
+}
+
+.toast strong {
+    padding: 0 0.2rem;
+}
+
+form p {
+    padding-left: 0.8rem;
+}
+
+/********/
+:root {
+    --wildWatermelon: #ff4f87;
+    --fuelYellow: #f0a035;
+    --textColor: #323232;
+    --bodyBg: #d6d6d6;
+    --white: #fff;
+    --black: #000;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.ft-recipe, .formulario, .mirarReceta {
+    max-width: calc(100% - 20px);
+    background: var(--white);
+    border-radius: 15px;
+    margin: 10px;
+}
+.ft-recipe {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.mirarReceta{
+    max-width: 40%;
+}
+
+.ft-recipe .ft-recipe__thumb {
+    width: 100%;
+    background-color: var(--bodyBg);
+    top: 10px;
+
+}
+.detalle{
+    Display: flex;
+    align-items: center;
+}
+.ft-recipe .ft-recipe__thumb h3 {
+    text-align: center;
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    color: var(--white);
+    font-size: 25px;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), transparent);
+    padding: 2.4rem 0 0;
+}
+
+.ft-recipe .ft-recipe__thumb img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: 10px 10px;
+    object-position: 50% 50%;
+    border-radius: 15px;
+}
+
+.ft-recipe .ft-recipe__content {
+    flex: 1;
+    padding: 0 2em 1em;
+}
+
+.ft-recipe .ft-recipe__content .content__header .row-wrapper {
+    display: flex;
+    padding: 0.55em 0 0.3em;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.ft-recipe .ft-recipe__content .content__header .recipe-details {
+    display: flex;
+    list-style: none;
+    padding: 1.4em 0 1em;
+    margin: 0;
+    justify-content: space-between;
+}
+
+.recipe-details-item .value {
+    color: #ff4f87;
+    margin-left: 0.35em;
+    vertical-align: bottom;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+.recipe-title {
+    text-align: center;
+    width: 100%;
+}
+
+.recipe-details-item .title {
+    font-size: 12px;
+    display: flex;
+    align-content: space-between;
+}
+
+.ft-recipe__content .description {
+    color: var(--black);
+    text-align: left;
+    text-justify: inter-word;
+}
+
+.content__footer {
+    text-align: center;
+    margin: 0 3rem;
+}
+.editar{
+    display: flex;
+    justify-content: space-between;
+}
+.content__footer a {
+    font-family: var(--headlinesFont);
+    display: inline-block;
+    background: var(--wildWatermelon);
+    padding: 0.45em 1em;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    font-size: 17px;
+    transition: transform 250ms ease, box-shadow 250ms ease;
+}
+.content__footer a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 34px 0 rgba(255, 79, 135, 0.32);
+}
+
+@media only screen and (max-width: 750px) {
+    .navegacion h1 a {
+        font-size: 15px;
+    }
+
+    .ft-recipe {
+        margin: auto;
+    }
+}

@@ -18,3 +18,8 @@
     <input type="hidden" name="tipo-mensaje" value="blue">
     <input type="hidden" name="texto-mensaje" value="{!! session('status') !!}">
 @endif
+
+@if ($errors->any())
+    <input type="hidden" name="tipo-mensaje" value="red">
+    <input type="hidden" name="texto-mensaje" value="{{ implode(', ', $errors->all()) }}">
+@endif

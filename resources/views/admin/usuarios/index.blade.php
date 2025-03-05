@@ -55,16 +55,17 @@
                                 <a href="{{ url("admin/usuarios/activar/".$row->id) }}" title="{{ $title }}">
                                     <i class="{{ $color }} material-icons">{{ $icono }}</i>
                                 </a>
-                                <a href="#" class="activator" title="Borrar">
+                                <a href="#" class="activator" onclick="event.preventDefault(); this.closest('.card').querySelector('.card-reveal').classList.toggle('show');" title="Borrar">
                                     <i class="material-icons">delete</i>
                                 </a>
                             </div>
                         </div>
-                        <!--Confirmación de borrar-->
-                        <div class="card-reveal">
+                    </div>
+                       <!--Confirmación de borrar-->
+                       <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4">Borrar usuario<i
                                     class="material-icons right">close</i></span>
-                            <p>
+                            <p style="color:#000;">
                                 ¿Está seguro de que quiere borrar al usuario<strong>{{ $row->nombre }}</strong>?<br>
                                 Esta acción no se puede deshacer.
                             </p>
@@ -74,7 +75,6 @@
                                 </button>
                             </a>
                         </div>
-                    </div>
                 </div>
             </article>
         @endforeach

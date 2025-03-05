@@ -126,7 +126,7 @@ class ComidaController extends Controller
      */
     public function misComidas($usuario)
     {
-        //Obtengo la Partida o muestro error
+        //Obtengo Mis Comidas o muestro error
         $rowset = Comida::orderBy('fecha', 'DESC')
             ->join('usuarios', 'usuarios.usuario', '=', 'comidas.autor')
             ->where('usuarios.usuario' ,$usuario)

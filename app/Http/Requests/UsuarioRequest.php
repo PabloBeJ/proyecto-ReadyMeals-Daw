@@ -35,7 +35,13 @@ class UsuarioRequest extends FormRequest
         ];
         //Si estoy cambiando la clave (o es nuevo), password requerido y entre 8 y 16 caracteres
         if ($request->cambiar_clave) {
-            $rules['password'] = 'required|min:8|max:16';
+            $rules['password'] = 'required|min:8';
+        }
+         // If we're deleting the account, only require the password field
+        if ($request->isMethod('delete')) {
+            $rules = [
+                'password' => 'required|min:8',  // Only require the password for deletion
+            ];
         }
 
 
