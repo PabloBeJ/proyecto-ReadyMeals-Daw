@@ -64,6 +64,7 @@ Route::get('buscador',[AppController::class,'buscador']);
 //Auth
 Route::get('acceder', [AuthController::class, 'acceder'])->name('acceder');
 Route::post('autenticar', [AuthController::class, 'autenticar'])->name('autenticar');
+Route::post('cambiar', [AuthController::class, 'cambiar'])->name('cambiar');
 Route::get('registro', [AuthController::class, 'registro'])->name('registro');
 Route::post('registrarse', [AuthController::class, 'registrarse'])->name('registrarse');
 Route::post('salir', [AuthController::class, 'salir'])->name(  'salir');
