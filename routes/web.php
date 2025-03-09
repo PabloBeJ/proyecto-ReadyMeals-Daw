@@ -24,10 +24,20 @@ Route::get('/', function () {
 //Front-end
 Route::get('/', [AppController::class, 'index'])->name('home');
 Route::get('comidas', [AppController::class, 'comidas'])->name('comidas');
+
+Route::get('mostrar', [AppController::class, 'mostrar'])->name('mostrar');
+
+
+
+
+
 Route::get('comida/{slug}/{id}', [AppController::class, 'comida'])->name('comida');
 Route::get('terminos', [AppController::class, 'term'])->name('term');
 
 
+//API Noticias
+
+Route::get('leer', [AppController::class, 'leer'])->name('leer');
 
 //Back-end
 Route::get('admin', [AdminController::class, 'index'])->name('admin');

@@ -4,6 +4,11 @@
     <h3>
         <a href="{{ route("admin") }}" title="Inicio">Inicio</a> <span>| Comidas</span>
     </h3>
+      <!--Paginación-->
+      <div class="row paginado">
+        {{ $rowset->links() }}
+    </div>
+
     <div class="row">
         <!--Nuevo-->
         <article class="col s12 l6">

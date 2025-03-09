@@ -392,6 +392,50 @@ h2 {
     box-shadow: 0 10px 34px 0 rgba(255, 79, 135, 0.32);
 }
 
+/* PAGINADOR */
+
+.paginado nav{
+    background: none;
+    margin-top: 2rem;
+    line-height: normal;
+}
+
+.pagination li{
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+    margin-right: 0.1rem;
+    border: 1px solid rgb(30,30,30);
+    border-radius: unset;
+}
+
+.pagination li a{
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: rgb(100,100,100);
+}
+
+.pagination li a:hover{
+    color: rgb(30,30,30);
+    font-weight: bold;
+    background: none;
+}
+
+.pagination li.active{
+    background: rgb(30,30,30);
+    color: #fff;
+}
+
+.pagination li.disabled {
+    border: 1px solid #BBB;
+    color: #BBB;
+}
+
+.pagination li.active {
+    background-color: rgb(30,30,30);
+    color: #FFF;
+}
+
 @media only screen and (max-width: 750px) {
     .navegacion h1 a {
         font-size: 15px;

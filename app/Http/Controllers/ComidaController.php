@@ -23,10 +23,13 @@ class ComidaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        //Página a mostrar
+        $pagina = ($request->pagina) ? $request->pagina : 1;
+
         //Obtengo todas las comidas ordenadas por fecha más reciente
-        $rowset = Comida::orderBy("fecha","DESC")->get();
+        $rowset = Comida::orderBy("fecha","DESC")->paginate(10,['*'],'pagina',$pagina);
 
         return view('admin.comidas.index',[
             'rowset' => $rowset,

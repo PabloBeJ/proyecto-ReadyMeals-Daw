@@ -60,4 +60,43 @@ class AppController extends Controller
         return view('app.comidas', compact('rowset')); // Correct usage
     }
 
+//Métodos para la API (podrían ir en otro controlador)
+
+public function mostrar(){
+
+    //Obtengo las noticias a mostrar en el listado de noticias
+    $rowset = Comida::where('activo', 1)->orderBy('fecha', 'DESC')->get();
+
+    //Opción rápida (datos completos)
+    $comidas = $rowset;
+
+
+    //Devuelvo JSON
+    return response()->json(
+        $comidas, //Array de objetos
+        200, //Tipo de respuesta
+        [], //Headers
+        JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE //Opciones de escape
+    );
+
+}
+
+
+
+
+    public function leer(){
+        //Url de destino
+        $url = route('mostrar');
+
+        //Parseo datos a un array
+        $rowset = json_decode(file_get_contents($url), true);
+
+        //LLamo a la vista
+        return view('api.leer',[
+            'rowset' => $rowset,
+        ]);
+
+    }
+
+
 }

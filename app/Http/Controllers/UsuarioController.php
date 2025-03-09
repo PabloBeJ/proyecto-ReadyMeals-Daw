@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Usuario;
 use App\Models\Comida;
+use Illuminate\Http\Request;
 use App\Http\Requests\UsuarioRequest;
 class UsuarioController extends Controller
 {
@@ -19,10 +20,12 @@ class UsuarioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        //Página a mostrar
+        $pagina = ($request->pagina) ? $request->pagina : 1;
         //Obtengo todos los usuarios ordenados por nombre
-        $rowset = Usuario::orderBy("nombre", "ASC")->get();
+        $rowset = Usuario::orderBy("nombre", "ASC")->paginate(10,['*'],'pagina',$pagina);
 
         return view('admin.usuarios.index', [
             'rowset' => $rowset,
